@@ -1,0 +1,40 @@
+.navContainer {
+	display: flex;
+	flex: 1;
+	height: 80px;
+}
+.navAlign {
+	display: flex; 
+	flex-direction: row;
+	align-items: center;
+}
+.navLogo {
+	padding: 0 100px;
+}
+.navCategories {
+	display: flex;
+	flex-direction: row;
+	padding: 0 200px;
+}
+.sortByContainer {
+	display: flex;
+	flex-direction: row;
+}
+.sortByAlign {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.sortBy {
+	padding-right: 15px;
+}
+.sortByOptionA {
+	color: #eee;
+}
+.sortByOptionB {
+	color: #eee;
+	padding-top: 5px;
+}
+.type {
+	color: #fed80a;
+}
