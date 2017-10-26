@@ -1,0 +1,16 @@
+.entirePostList {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+}
+.postListContainer {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+.postListColumn {
+	display: flex;
+	flex-direction: column;
+	margin: 0 50px;
+}

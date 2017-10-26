@@ -7,7 +7,7 @@ import '../styles/PostDetails.css';
 class PostDetails extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         
       </div>
     );

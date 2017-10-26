@@ -10,7 +10,7 @@ import '../styles/NavBar.css';
 class NavBar extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <div className="navContainer type">
         	<div className="navAlign">
 		    	{/* map over category later */}

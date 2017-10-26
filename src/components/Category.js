@@ -7,7 +7,7 @@ import '../styles/Category.css';
 class Category extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <ul className="categoryList">
         	<li className="categoryItem">
         		Category
