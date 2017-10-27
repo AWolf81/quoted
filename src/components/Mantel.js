@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 
 // project components
 import Home from './Home'
@@ -12,7 +13,7 @@ class Mantel extends Component {
   render() {
     return (
       <div className="container">
-        <Home />
+        <Route exact path="/" render={() => ( <Home /> )} />
       </div>
     );
   }

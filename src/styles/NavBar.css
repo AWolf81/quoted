@@ -39,3 +39,11 @@
 .type {
 	color: #fed80a;
 }
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:visited {
+	color: inherit;
+	text-decoration: none;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 // project components
 import Category from '../components/Category'
@@ -14,9 +15,11 @@ class NavBar extends Component {
         <div className="navContainer type">
         	<div className="navAlign">
 		    	{/* map over category later */}
-		    	<div className="navLogo">
-		    		Mantel
-		    	</div>
+		    	<Link to="/">
+			    	<div className="navLogo">
+			    		Mantel
+			    	</div>
+		    	</Link>
 		    	<div className="navCategories">
 		        	<Category />
 		        </div>
