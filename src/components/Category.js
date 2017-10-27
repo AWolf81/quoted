@@ -9,9 +9,15 @@ class Category extends Component {
     return (
       <div>
         <ul className="categoryList">
-        	<li className="categoryItem">
-        		Category
+        	<li className="categoryItem red">
+        		People
         	</li>
+          <li className="categoryItem green">
+            Places
+          </li>
+          <li className="categoryItem purple">
+            Things
+          </li>
         </ul>
       </div>
     );

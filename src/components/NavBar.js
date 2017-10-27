@@ -19,8 +19,6 @@ class NavBar extends Component {
 		    	</div>
 		    	<div className="navCategories">
 		        	<Category />
-		        	<Category />
-		        	<Category />
 		        </div>
 		        <div className="sortByContainer">
 		        	<div className="sortByAlign">

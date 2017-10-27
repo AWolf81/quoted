@@ -1,0 +1,55 @@
+.postContainer {
+	width: 300px;
+	height: 100%;
+	background-color: #122C46;
+	border-radius: 10px;
+	margin: 20px 0;
+}
+.postAlign {
+	padding: 20px;
+}
+.postRow {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 15px;
+}
+.postTitle {
+	color: #04d794;
+	font-size: 20px;
+	padding-top: 5px;
+	line-height: 24px;
+}
+.postAuthorIcon {
+	padding-right: 8px;
+}
+.actionList {
+	display: flex;
+	flex-direction: row;
+}
+.actionItem {
+	display: flex;
+	flex-direction: row;
+	padding-right: 20px;
+}
+.actionCommentCount {
+	font-size: 14px;
+	padding-right: 5px;
+	padding-top: 3px;
+}
+.voteScore {
+	border-radius: 10px;
+	background-color: #0088ff;
+	margin-right: 20px;
+}
+.voteScoreCount {
+	font-size: 14px;
+	padding: 2px 10px;
+	color: #fff;
+}
+.postCategory {
+	font-size: 13px;
+	color: #fff;
+	background-color: #7236D7;
+	padding: 2px 10px;
+	border-radius: 8px;
+}

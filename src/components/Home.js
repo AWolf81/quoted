@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // project components
 import NavBar from './NavBar'
-import Post from './Post'
+import PostCard from './PostCard'
 
 // project styles
 import '../styles/Home.css'
@@ -17,19 +17,19 @@ class Home extends Component {
 		<NavBar />
 		<div className="postListContainer">
 			<div className="postListColumn">
-				<Post />
-				<Post />
-				<Post />
+				<PostCard />
+				<PostCard />
+				<PostCard />
 			</div>
 			<div className="postListColumn">
-				<Post />
-				<Post />
-				<Post />
+				<PostCard />
+				<PostCard />
+				<PostCard />
 			</div>
 			<div className="postListColumn">
-				<Post />
-				<Post />
-				<Post />
+				<PostCard />
+				<PostCard />
+				<PostCard />
 			</div>
 		</div>
 	</div>
