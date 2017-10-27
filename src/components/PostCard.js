@@ -26,7 +26,10 @@ class PostCard extends Component {
             			<MdAccountCircle />
             		</div>
             		<div className="postAuthorName">
-            			Jane
+            			Jane&nbsp;
+                        <span className="postTimeStamp">
+                            / Jan 12 @ 4PM
+                        </span>
             		</div>
             	</div>
             	<div className="postRow">

@@ -22,6 +22,9 @@
 .postAuthorIcon {
 	padding-right: 8px;
 }
+.postTimeStamp {
+	color: #8A86B1;
+}
 .actionList {
 	display: flex;
 	flex-direction: row;
