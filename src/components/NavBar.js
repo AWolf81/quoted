@@ -30,12 +30,18 @@ class NavBar extends Component {
 			        	</div>
 			        </div>
 		        	<div className="sortByOptions">
-			        	<div className="sortByOptionA">
-			        		Vote Score
-			        	</div>
-			        	<div className="sortByOptionB">
-			        		Time Posted
-			        	</div>
+		        		<div className="sortByOptionA">
+			        		<button className="sortByOptionAButton"></button>
+				        	<div className="sortByOptionAText">
+				        		Vote Score
+				        	</div>
+				        </div>
+				        <div className="sortByOptionB">
+					        <button className="sortByOptionBButton"></button>
+				        	<div className="sortByOptionBText">
+				        		Time Posted
+				        	</div>
+				        </div>
 			        </div>
 		        </div>
 		    </div>

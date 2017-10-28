@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Modal } from 'react-modal'
+import Modal from 'react-modal'
+import Loading from 'react-loading'
 
 // icons
 import MdAddCircle from 'react-icons/lib/md/add-circle'
@@ -16,10 +17,19 @@ import '../styles/All.css'
 class Home extends Component {
 
 	state = {
-		newPostModalIsOpen: false,
+		loadingCreatePost: false,
+		createPostModalOpen: false,
+		detailsPostModalOpen: false,
 	}
 
+	openDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: true }))
+	closeDetailsPostModal = () => this.setState(() => ({ detailsPostModalModalOpen: false }))
+	openCreatePostModal = () => this.setState(() => ({ createPostModalOpen: true }))
+	closeCreatePostModal = () => this.setState(() => ({ createPostModalModalOpen: false }))
+
 	render() {
+		const { loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
+
 		return (
 			<div className="entirePostList">
 				<NavBar />
@@ -46,23 +56,27 @@ class Home extends Component {
 						<PostCard />
 					</div>
 				</div>
-				<button>
-					<div className="newPostButton">
-						<MdAddCircle />
-					</div>
+				<button className="newPostButton"
+						onClick={this.openCreatePostModal}>
+					<MdAddCircle />
 				</button>
-				{/* 
-				<Modal isOpen={false}
-					   // onAfterOpen={afterOpenFn}
-					   // onRequestClose={requestCloseFn}
-					   // closeTimeoutMS={n}
-					   // style={customStyle}
-					   contentLabel="Modal"
-					   >
-					<h1>Modal Content</h1>
-					<p>Etc.</p>
-				</Modal>
-				*/}
+				
+				<Modal
+		          className='modal'
+		          overlayClassName='overlay'
+		          isOpen={createPostModalOpen}
+		          onRequestClose={this.closeCreatePostModal}
+		          contentLabel='Modal'
+		        >
+					<div>
+						{loadingCreatePost === true
+							?  <Loading type='bubbles' delay={200} color='fed80a' />
+							: <div>
+								
+							  </div>
+						}
+					</div>
+		        </Modal>
 			</div>
 		);
 	}
