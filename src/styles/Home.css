@@ -35,3 +35,48 @@ button, input[type="submit"], input[type="reset"] { /* remove default button sty
     cursor: pointer;
     outline: inherit !important;
 }
+/* POST DETAILS MODAL */
+
+
+/* POST EDITOR MODAL */
+.postEditorBg {
+	position: fixed;
+	z-index: 3;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: #122C46;
+	opacity: 0.8;
+}
+.postEditorContainer {
+	position: fixed;
+	z-index: 4;
+	width: 600px;
+	height: 300px;
+	top: 30%;
+	left: 50%;
+	margin-left: -23%;
+	background-color: #122C46;
+  	border-radius: 15px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.postEditorHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+	padding: 0 20px;
+}
+.postEditorHeaderItem {
+	color: #fed80a;
+}
+
+/* MISC */
+.loading {
+	position: fixed;
+	z-index: 5;
+	top: 45%;
+	left: 45%;
+}

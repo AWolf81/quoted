@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // icons
-import FaCommenting from 'react-icons/lib/fa/commenting'
+import FaQuoteLeft from 'react-icons/lib/fa/quote-left'
 import FaThumbsUp from 'react-icons/lib/fa/thumbs-up'
 import FaThumbsDown from 'react-icons/lib/fa/thumbs-down'
 import MdAccountCircle from 'react-icons/lib/md/account-circle'
@@ -39,7 +39,7 @@ class PostCard extends Component {
                 				2
                 			</div>
                 			<div className="actionComment">
-                				<FaCommenting />
+                				<FaQuoteLeft />
                 			</div>
                 		</div>
                 		<div className="actionItem">

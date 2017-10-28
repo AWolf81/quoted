@@ -29,6 +29,15 @@ body {
   flex: 1;
 }
 
+.createOverlay {
+  position: fixed;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
 /* for animated transitions */
 .switchWrapper {
   position: relative;
