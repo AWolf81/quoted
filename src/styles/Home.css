@@ -53,13 +53,17 @@ button, input[type="submit"], input[type="reset"] { /* remove default button sty
 	position: fixed;
 	z-index: 4;
 	width: 600px;
-	height: 300px;
-	top: 30%;
+	height: 400px;
+	overflow: hidden;
+	top: 20%;
 	left: 50%;
 	margin-left: -23%;
 	background-color: #122C46;
   	border-radius: 15px;
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.postEditorContainer:hover {
+	overflow-y: scroll;
 }
 .postEditorHeader {
 	display: flex;
@@ -69,8 +73,98 @@ button, input[type="submit"], input[type="reset"] { /* remove default button sty
 	height: 60px;
 	padding: 0 20px;
 }
-.postEditorHeaderItem {
+.postEditorAuthorAlign {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.postEditorAuthor {
+	padding-left: 8px;
+}
+.white {
+	color: #fff;
+}
+.gold {
 	color: #fed80a;
+}
+.postEditorMain {
+	padding: 10px 40px 30px 40px;
+}
+.postEditorRow {
+	padding: 10px 0;
+}
+.postEditorTitle {
+	font-size: 24px;
+	color: #04d794;
+}
+.postEditorBody {
+	line-height: 22px;
+}
+.postEditorActionItems {
+	display: flex;
+	flex-direction: row;
+}
+.postEditorActionItem {
+	display: flex;
+	flex-direction: row;
+	margin-right: 20px;
+}
+.postEditorVoteScore {
+	border-radius: 10px;
+	background-color: #0088ff;
+}
+.postEditorVoteScoreCount {
+	font-size: 14px;
+	padding: 2px 10px;
+	color: #fff;
+}
+.postEditorCategory {
+	font-size: 13px;
+	color: #fff;
+	background-color: #7236D7;
+	padding: 2px 10px;
+	border-radius: 8px;
+}
+.postEditorLineBreak {
+	height: 10px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 20px;
+}
+/* POST DETAIL COMMENTS */
+.postEditorCommentBlock {
+	background-color: #0F1E31;
+	border-radius: 10px;
+}
+.postEditorCommentBlockAlign {
+	padding: 20px 20px 10px 20px;
+}
+.postEditorCommentTitleAlign {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.postEditorCommentTitle {
+	color: #fed80a;
+	font-size: 20px;
+	margin: 10px 0;
+	padding-left: 10px;
+}
+.postEditorCommentMain {
+	display: flex;
+	flex-direction: row;
+}
+.postEditorCommentText {
+	line-height: 22px;
+}
+.postEditorCommentClose {
+	margin: 0 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.postEditorCommentActionItems {
+	display: flex;
+	flex-direction: row;
 }
 
 /* MISC */

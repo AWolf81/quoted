@@ -23,12 +23,10 @@
 	font-size: 20px;
 	padding-top: 5px;
 	line-height: 24px;
+	text-align: left;
 }
 .postAuthorIcon {
 	padding-right: 8px;
-}
-.postTimeStamp {
-	color: #8A86B1;
 }
 .actionList {
 	display: flex;

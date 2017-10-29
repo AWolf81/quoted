@@ -6,6 +6,9 @@ import Loading from 'react-loading'
 import MdAddCircle from 'react-icons/lib/md/add-circle'
 import FaClose from 'react-icons/lib/fa/close'
 import FaQuoteLeft from 'react-icons/lib/fa/quote-left'
+import MdAccountCircle from 'react-icons/lib/md/account-circle'
+import FaThumbsUp from 'react-icons/lib/fa/thumbs-up'
+import FaThumbsDown from 'react-icons/lib/fa/thumbs-down'
 
 // project components
 import NavBar from './NavBar'
@@ -91,16 +94,151 @@ class Home extends Component {
 							    	<div className="postEditorBg" />
 									<div className="postEditorContainer">
 										<div className="postEditorHeader">
-											<div className="postEditorHeaderItem">
-												{/* empty for now */}
+											<div className="white">
+												<div className="postEditorAuthorAlign">
+													<MdAccountCircle />
+													<div className="postEditorAuthor">
+														Jane
+													</div>
+													<div className="postEditorAuthor">
+														/ Jan 12 @ 4PM
+													</div>
+												</div>
 											</div>
-											<div className="postEditorHeaderItem">
-												<FaQuoteLeft />
-											</div>
-											<button className="postEditorHeaderItem"
+											<button className="gold"
 													onClick={this.closeDetailsPostModal}>
 												<FaClose />
 											</button>
+										</div>
+										<div className="postEditorMain">
+											<div className="postEditorRow">
+												<div className="postEditorTitle">
+													This is a post title. I'd like to see how long it can go.
+												</div>
+											</div>
+											<div className="postEditorRow">
+												<div className="postEditorActionItems">
+													<div className="postEditorActionItem">
+							                			<div className="actionCommentCount">
+							                				2
+							                			</div>
+							                			<div className="actionComment">
+							                				<FaQuoteLeft />
+							                			</div>
+							                		</div>
+							                		<div className="postEditorActionItem">
+														<div className="postEditorThumbsUp">
+															<FaThumbsUp />
+														</div>
+													</div>
+													<div className="postEditorActionItem">
+														<div className="postEditorThumbsDown">
+															<FaThumbsDown />
+														</div>
+													</div>
+													<div className="postEditorActionItem">
+														<div className="postEditorVoteScore">
+								                            <div className="postEditorVoteScoreCount">
+								                                +8
+								                            </div>
+								                        </div>
+								                    </div>
+							                        <div className="postEditorActionItem">
+														<div className="postEditorCategory">
+															Things
+														</div>
+													</div>
+												</div>
+											</div>
+											<div className="postEditorRow">
+												<div className="postEditorBody">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur commodo, orci a placerat accumsan, erat quam placerat lacus, et fringilla nunc lorem eget lectus. Donec posuere neque nec rhoncus mattis. Morbi euismod mattis tortor ut ornar eget lectus. Donec posuere neque nec rhoncus mattis. Morbi euismod mattis tortor ut ornar
+												</div>
+											</div>
+											<div className="postEditorRow">
+												<div className="postEditorLineBreak" />
+											</div>
+											<div className="postEditorRow">
+												<div className="postEditorCommentTitleAlign">
+													<div className="gold">
+														<FaQuoteLeft />
+													</div>
+													<div className="postEditorCommentTitle">
+														Leave a reply
+													</div>
+												</div>
+											</div>
+											<div className="postEditorCommentBlock">
+												<div className="postEditorCommentBlockAlign">
+													<div className="postEditorRow">
+														<div className="postEditorCommentMain">
+															<div className="postEditorReplyName">
+																<div>
+																	Name / 
+																</div>
+																
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>{/* REPLY BLOCK END */}
+											<div className="postEditorRow">
+												<div className="postEditorCommentTitleAlign">
+													<div className="gold">
+														<FaQuoteLeft />
+													</div>
+													<div className="postEditorCommentTitle">
+														Comments
+													</div>
+												</div>
+											</div>
+											<div className="postEditorCommentBlock">
+												<div className="postEditorCommentBlockAlign">
+													<div className="postEditorRow">
+														<div className="postEditorCommentMain">
+															<div className="postEditorCommentText">
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur commodo, orci a placerat accumsan, erat quam placerat lacus, et fringilla nunc lorem eget lectus. Donec posuere neque nec rhoncus m
+															</div>
+															<button className="postEditorCommentClose">
+																<FaClose />
+															</button>
+														</div>
+														<div className="postEditorRow">
+															<div className="postEditorCommentActionItems">
+																<div className="postEditorAuthorAlign postEditorActionItem">
+																	<MdAccountCircle />
+																	<div className="postEditorAuthor">
+																		Jane
+																	</div>
+																	<div className="postEditorAuthor">
+																		/ Jan 12 @ 4PM
+																	</div>
+																</div>
+										                		<div className="postEditorActionItem">
+																	<div className="postEditorThumbsUp">
+																		<FaThumbsUp />
+																	</div>
+																</div>
+																<div className="postEditorActionItem">
+																	<div className="postEditorThumbsDown">
+																		<FaThumbsDown />
+																	</div>
+																</div>
+																<div className="postEditorActionItem">
+																	<div className="postEditorVoteScore">
+											                            <div className="postEditorVoteScoreCount">
+											                                +8
+											                            </div>
+											                        </div>
+											                    </div>
+											                    <div className="postEditorActionItem">
+											                    	Reply
+											                    </div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>{/* COMMENT BLOCK END */}
 										</div>
 									</div>
 								</div>
@@ -132,10 +270,10 @@ class Home extends Component {
 											<div className="postEditorHeaderItem">
 												{/* empty for now */}
 											</div>
-											<div className="postEditorHeaderItem">
+											<div className="postEditorHeaderItem gold">
 												<FaQuoteLeft />
 											</div>
-											<button className="postEditorHeaderItem"
+											<button className="postEditorHeaderItem gold"
 													onClick={this.closeCreatePostModal}>
 												<FaClose />
 											</button>

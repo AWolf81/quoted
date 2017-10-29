@@ -29,6 +29,7 @@ body {
   flex: 1;
 }
 
+/* Modals */
 .createOverlay {
   position: fixed;
   z-index: 3;
@@ -36,6 +37,9 @@ body {
   left: 0px;
   right: 0px;
   bottom: 0px;
+}
+.ReactModal__Body--open {
+  overflow-y: hidden;
 }
 
 /* for animated transitions */
