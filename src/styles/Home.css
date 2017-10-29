@@ -35,10 +35,8 @@ button, input[type="submit"], input[type="reset"] { /* remove default button sty
     cursor: pointer;
     outline: inherit !important;
 }
-/* POST DETAILS MODAL */
 
-
-/* POST EDITOR MODAL */
+/* MAIN MODALS */
 .postEditorBg {
 	position: fixed;
 	z-index: 3;
@@ -52,17 +50,33 @@ button, input[type="submit"], input[type="reset"] { /* remove default button sty
 .postEditorContainer {
 	position: fixed;
 	z-index: 4;
-	width: 600px;
+	width: 700px;
 	height: 400px;
 	overflow: hidden;
 	top: 20%;
-	left: 50%;
+	left: 46%;
+	margin-left: -23%;
+	background-color: #122C46;
+  	border-radius: 15px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.postEditorContainerTwo {
+	position: fixed;
+	z-index: 4;
+	width: 700px;
+	height: 300px;
+	overflow: hidden;
+	top: 25%;
+	left: 46%;
 	margin-left: -23%;
 	background-color: #122C46;
   	border-radius: 15px;
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 .postEditorContainer:hover {
+	overflow-y: scroll;
+}
+.postEditorContainerTwo:hover {
 	overflow-y: scroll;
 }
 .postEditorHeader {
@@ -72,6 +86,11 @@ button, input[type="submit"], input[type="reset"] { /* remove default button sty
 	justify-content: space-between;
 	height: 60px;
 	padding: 0 20px;
+}
+.modalTwoHeaderAlign {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 .postEditorAuthorAlign {
 	display: flex;
@@ -89,6 +108,9 @@ button, input[type="submit"], input[type="reset"] { /* remove default button sty
 }
 .postEditorMain {
 	padding: 10px 40px 30px 40px;
+}
+.postEditorRowAlign {
+	padding: 0 20px;
 }
 .postEditorRow {
 	padding: 10px 0;
@@ -165,6 +187,83 @@ button, input[type="submit"], input[type="reset"] { /* remove default button sty
 .postEditorCommentActionItems {
 	display: flex;
 	flex-direction: row;
+}
+.postEditorActionReply {
+	font-size: 13px;
+	color: #142438;
+	background-color: #fed80a;
+	padding-top: 2px;
+	border-radius: 8px;
+
+}
+.postEditorReplyBlock {
+	background-color: #0F1E31;
+	border-radius: 10px;
+}
+.postEditorReplyBlockAlign {
+	padding: 10px 20px;
+}
+.postEditorReplyMain {
+	display: flex;
+	flex-direction: column;
+}
+.postEditorReplyRow {
+	margin: 10px 0;
+}
+.postEditorReplyName {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.postEditorReplyNamePrompt {
+	margin-right: 10px;
+}
+.postEditorReplyContent {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.postEditorReplyContentPrompt {
+	margin-right: 14px;
+	align-self: flex-start;
+}
+.postEditorReplyInput {
+	width: 100%;
+	height: 60px;
+}
+input[type=text] {
+	height: 25px;
+	padding: 0 10px;
+	color: #fff;
+	font-family: 'Quattrocento Sans', sans-serif;
+	font-size: 16px;
+	background-color: #0B213E;
+	border: none;
+	border-radius: 4px;
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+textarea {
+	color: #fff;
+	padding: 3px 10px;
+	font-family: 'Quattrocento Sans', sans-serif;
+	font-size: 16px;
+	background-color: #0B213E;
+	border: none;
+	border-radius: 4px;
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.postEditorReplyToCommentAlign {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.postEditorReplyToCommentText {
+	font-size: 16px;
+	padding-top: 2px
 }
 
 /* MISC */

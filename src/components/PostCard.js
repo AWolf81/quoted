@@ -43,14 +43,14 @@ class PostCard extends Component {
                 			</div>
                 		</div>
                 		<div className="actionItem">
-                			<div className="actionThumbsUp">
+                			<button className="actionThumbsUp">
                 				<FaThumbsUp />
-                			</div>
+                			</button>
                 		</div>
                 		<div className="actionItem">
-                			<div className="actionThumbsDown">
+                			<button className="actionThumbsDown">
                 				<FaThumbsDown />
-                			</div>
+                			</button>
                 		</div>
                         <div className="voteScore">
                             <div className="voteScoreCount">

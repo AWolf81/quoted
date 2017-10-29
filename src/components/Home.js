@@ -42,15 +42,15 @@ class Home extends Component {
 				<div className="postListContainer">
 					{/* map over from here */}
 					<div className="postListRow">
-						<button onClick={this.openDetailsPostModal}>
+						<div onClick={this.openDetailsPostModal}>
 							<PostCard />
-						</button>
-						<button onClick={this.openDetailsPostModal}>
+						</div>
+						<div onClick={this.openDetailsPostModal}>
 							<PostCard />
-						</button>
-						<button onClick={this.openDetailsPostModal}>
+						</div>
+						<div onClick={this.openDetailsPostModal}>
 							<PostCard />
-						</button>
+						</div>
 					</div>
 					<div className="postListRow">
 						<PostCard />
@@ -127,14 +127,14 @@ class Home extends Component {
 							                			</div>
 							                		</div>
 							                		<div className="postEditorActionItem">
-														<div className="postEditorThumbsUp">
+														<button className="postEditorThumbsUp">
 															<FaThumbsUp />
-														</div>
+														</button>
 													</div>
 													<div className="postEditorActionItem">
-														<div className="postEditorThumbsDown">
+														<button className="postEditorThumbsDown">
 															<FaThumbsDown />
-														</div>
+														</button>
 													</div>
 													<div className="postEditorActionItem">
 														<div className="postEditorVoteScore">
@@ -168,15 +168,32 @@ class Home extends Component {
 													</div>
 												</div>
 											</div>
-											<div className="postEditorCommentBlock">
-												<div className="postEditorCommentBlockAlign">
+											<div className="postEditorReplyBlock">
+												<div className="postEditorReplyBlockAlign">
 													<div className="postEditorRow">
-														<div className="postEditorCommentMain">
-															<div className="postEditorReplyName">
-																<div>
-																	Name / 
+														<div className="postEditorReplyMain">
+															<div className="postEditorReplyRow">
+																<div className="postEditorReplyName">
+																	<div className="postEditorReplyNamePrompt">
+																		Name 
+																	</div>
+																	<input type="text" />
 																</div>
-																
+															</div>
+															<div className="postEditorReplyRow">
+																<div className="postEditorReplyContent">
+																	<div className="postEditorReplyContentPrompt">
+																		Reply
+																	</div>
+																	<textarea className="postEditorReplyInput" type="text" />
+																</div>
+															</div>
+															<div className="postEditorRow">
+																<button className="postEditorReplyToCommentAlign">
+																	<div className="postEditorReplyToCommentText gold">
+																		Submit
+																	</div>
+																</button>
 															</div>
 														</div>
 													</div>
@@ -215,14 +232,14 @@ class Home extends Component {
 																	</div>
 																</div>
 										                		<div className="postEditorActionItem">
-																	<div className="postEditorThumbsUp">
+																	<button className="postEditorThumbsUp">
 																		<FaThumbsUp />
-																	</div>
+																	</button>
 																</div>
 																<div className="postEditorActionItem">
-																	<div className="postEditorThumbsDown">
+																	<button className="postEditorThumbsDown">
 																		<FaThumbsDown />
-																	</div>
+																	</button>
 																</div>
 																<div className="postEditorActionItem">
 																	<div className="postEditorVoteScore">
@@ -231,10 +248,14 @@ class Home extends Component {
 											                            </div>
 											                        </div>
 											                    </div>
-											                    <div className="postEditorActionItem">
-											                    	Reply
-											                    </div>
 															</div>
+														</div>
+														<div className="postEditorRow">
+															<button className="postEditorReplyToCommentAlign">
+																<div className="postEditorReplyToCommentText gold">
+																	Reply
+																</div>
+															</button>
 														</div>
 													</div>
 												</div>
@@ -265,19 +286,54 @@ class Home extends Component {
 								</div>
 							:   <div>
 							    	<div className="postEditorBg" /> 
-									<div className="postEditorContainer">
-										<div className="postEditorHeader">
-											<div className="postEditorHeaderItem">
-												{/* empty for now */}
-											</div>
-											<div className="postEditorHeaderItem gold">
-												<FaQuoteLeft />
-											</div>
-											<button className="postEditorHeaderItem gold"
+									<div className="postEditorContainerTwo">
+										<div className="postEditorRowAlign">
+											<div className="postEditorRow modalTwoHeaderAlign">
+												<div className="postEditorCommentTitleAlign">
+													<div className="gold">
+														<FaQuoteLeft />
+													</div>
+													<div className="postEditorCommentTitle">
+														Write a post
+													</div>
+												</div>
+												<button className="postEditorHeaderItem gold"
 													onClick={this.closeCreatePostModal}>
-												<FaClose />
-											</button>
-										</div>
+													<FaClose />
+												</button>
+											</div>
+											<div className="postEditorReplyBlock">
+												<div className="postEditorReplyBlockAlign">
+													<div className="postEditorRow">
+														<div className="postEditorReplyMain">
+															<div className="postEditorReplyRow">
+																<div className="postEditorReplyName">
+																	<div className="postEditorReplyNamePrompt">
+																		Name 
+																	</div>
+																	<input type="text" />
+																</div>
+															</div>
+															<div className="postEditorReplyRow">
+																<div className="postEditorReplyContent">
+																	<div className="postEditorReplyContentPrompt">
+																		Reply
+																	</div>
+																	<textarea className="postEditorReplyInput" type="text" />
+																</div>
+															</div>
+															<div className="postEditorRow">
+																<button className="postEditorReplyToCommentAlign">
+																	<div className="postEditorReplyToCommentText gold">
+																		Submit
+																	</div>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>{/* REPLY BLOCK END */}
 									</div>
 								</div>
 						}
