@@ -17,7 +17,7 @@ class NavBar extends Component {
 		    	{/* map over category later */}
 		    	<Link to="/">
 			    	<div className="navLogo">
-			    		Mantel
+			    		Quoted
 			    	</div>
 		    	</Link>
 		    	<div className="navCategories">

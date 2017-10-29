@@ -9,7 +9,7 @@ import '../styles/All.css'
 
 
 
-class Mantel extends Component {
+class Quoted extends Component {
   render() {
     return (
       <div className="container">
@@ -19,4 +19,4 @@ class Mantel extends Component {
   }
 }
 
-export default Mantel;
+export default Quoted;

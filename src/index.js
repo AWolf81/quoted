@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import './index.css';
-import Mantel from './components/Mantel';
+import Quoted from './components/Quoted';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
 	<BrowserRouter>
-		<Mantel />
+		<Quoted />
 	</BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();
