@@ -194,7 +194,10 @@ button, input[type="submit"], input[type="reset"] { /* remove default button sty
 	background-color: #fed80a;
 	padding-top: 2px;
 	border-radius: 8px;
-
+}
+.postEditorActionOnComment {
+	display: flex;
+	flex-direction: row;
 }
 .postEditorReplyBlock {
 	background-color: #0F1E31;
@@ -272,4 +275,7 @@ textarea {
 	z-index: 5;
 	top: 45%;
 	left: 45%;
+}
+.marg {
+	margin: 0 8px;
 }

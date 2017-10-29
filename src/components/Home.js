@@ -251,11 +251,18 @@ class Home extends Component {
 															</div>
 														</div>
 														<div className="postEditorRow">
-															<button className="postEditorReplyToCommentAlign">
-																<div className="postEditorReplyToCommentText gold">
-																	Reply
-																</div>
-															</button>
+															<div className="postEditorActionOnComment">
+																<button className="postEditorReplyToCommentAlign marg">
+																	<div className="postEditorReplyToCommentText gold">
+																		Reply
+																	</div>
+																</button>
+																<button className="postEditorReplyToCommentAlign marg">
+																	<div className="postEditorReplyToCommentText gold">
+																		Edit
+																	</div>
+																</button>
+															</div>
 														</div>
 													</div>
 												</div>
