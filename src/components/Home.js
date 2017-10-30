@@ -156,6 +156,11 @@ class Home extends Component {
 												</div>
 											</div>
 											<div className="postEditorRow">
+												<button className="gold">
+													Edit
+												</button>
+											</div>
+											<div className="postEditorRow">
 												<div className="postEditorLineBreak" />
 											</div>
 											<div className="postEditorRow">

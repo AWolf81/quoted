@@ -31,16 +31,14 @@ class NavBar extends Component {
 			        </div>
 		        	<div className="sortByOptions">
 		        		<div className="sortByOptionA">
-			        		<button className="sortByOptionAButton"></button>
-				        	<div className="sortByOptionAText">
+				        	<button className="sortByOptionAText">
 				        		Vote Score
-				        	</div>
+				        	</button>
 				        </div>
 				        <div className="sortByOptionB">
-					        <button className="sortByOptionBButton"></button>
-				        	<div className="sortByOptionBText">
+				        	<button className="sortByOptionBText">
 				        		Time Posted
-				        	</div>
+				        	</button>
 				        </div>
 			        </div>
 		        </div>
