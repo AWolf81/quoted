@@ -18,15 +18,27 @@ import PostCard from './PostCard'
 import '../styles/Home.css'
 import '../styles/All.css'
 
+// api
+import * as API from '../utils/api.js'
+
 
 class Home extends Component {
 
 	state = {
+		receivedData: [],
 		loadingCreatePost: false,
 		loadingDetailsPost: false,
 		createPostModalOpen: false,
 		detailsPostModalOpen: false,
 	}
+
+	componentDidMount() {
+		API.getAllPosts().then((data) => {
+			console.log('receivedData: ' + data)
+			this.setState({ receivedData: data })
+			console.log('stated data: ' + this.state.receivedData)
+		})
+    }
 
 	openDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: true }))
 	closeDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: false }))
