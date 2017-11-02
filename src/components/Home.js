@@ -54,7 +54,7 @@ class Home extends Component {
 					<div className="postListRow">
 						{receivedData.map((postList, index) => (
 							<div key={index} onClick={this.openDetailsPostModal}>
-								<PostCard key={postList.postId} postCardData={postList} />
+								<PostCard key={postList.postId} postCard={postList} />
 							</div>
 						))}
 					</div>
