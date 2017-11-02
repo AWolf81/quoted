@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Modal from 'react-modal'
 import Loading from 'react-loading'
 
@@ -48,6 +49,7 @@ class Home extends Component {
 	render() {
 		const { loadingDetailsPost, loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
 
+		console.log('YAY PROPS', this.props)
 		return (
 			<div className="entirePostList">
 				<NavBar />
@@ -368,4 +370,4 @@ class Home extends Component {
 	}
 }
 
-export default Home;
+export default connect()(Home)

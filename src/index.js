@@ -19,8 +19,8 @@ console.log(store.getState())
 
 ReactDOM.render(
 	<BrowserRouter>
-{/*		<Provider store={store}> 	*/}
-			<Quoted store={store}/>
-{/*		</Provider>					*/}
+		<Provider store={store}>
+			<Quoted />
+		</Provider>
 	</BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();
