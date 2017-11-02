@@ -3,8 +3,9 @@
 const API = "http://localhost:3001"
 
 let token = localStorage.token
-if (!token)
+if (!token) {
 	token = localStorage.token = Math.random().toString(36).substr(-8)
+}
 
 const headers = {
 	'Accept': 'application/json',
@@ -16,3 +17,5 @@ export function getAllPosts (token) {
 		.then(res => res.json())
 		.then(data => data)
 }
+
+// returns object data

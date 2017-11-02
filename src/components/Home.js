@@ -35,9 +35,7 @@ class Home extends Component {
 
 	componentDidMount() {
 		API.getAllPosts().then((data) => {
-			console.log('receivedData: ' + data)
 			this.setState({ receivedData: data })
-			console.log('stated data: ' + this.state.receivedData)
 		})
     }
 
@@ -47,39 +45,18 @@ class Home extends Component {
 	closeCreatePostModal = () => this.setState(() => ({ createPostModalOpen: false }))
 
 	render() {
-		const { loadingDetailsPost, loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
+		const { receivedData, loadingDetailsPost, loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
 
-		console.log('YAY PROPS', this.props)
 		return (
 			<div className="entirePostList">
 				<NavBar />
 				<div className="postListContainer">
-					{/* map over from here */}
 					<div className="postListRow">
-						<div onClick={this.openDetailsPostModal}>
-							<PostCard />
-						</div>
-						<div onClick={this.openDetailsPostModal}>
-							<PostCard />
-						</div>
-						<div onClick={this.openDetailsPostModal}>
-							<PostCard />
-						</div>
-					</div>
-					<div className="postListRow">
-						<PostCard />
-						<PostCard />
-						<PostCard />
-					</div>
-					<div className="postListRow">
-						<PostCard />
-						<PostCard />
-						<PostCard />
-					</div>
-					<div className="postListRow">
-						<PostCard />
-						<PostCard />
-						<PostCard />
+						{receivedData.map((postList, index) => (
+							<div key={index} onClick={this.openDetailsPostModal}>
+								<PostCard key={postList.postId} postCardData={postList} />
+							</div>
+						))}
 					</div>
 				</div>
 				<button className="newPostButton"
@@ -370,4 +347,13 @@ class Home extends Component {
 	}
 }
 
-export default connect()(Home)
+function mapStateToProps(postId) {
+	return {
+		id: 'Ty'
+	}
+}
+
+export default connect(mapStateToProps)(Home)
+
+
+
