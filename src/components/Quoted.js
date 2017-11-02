@@ -12,7 +12,7 @@ import '../styles/All.css'
 class Quoted extends Component {
 
 	state = {
-		postId: null,
+		postId: null, 
 	}
 
 	render() {
