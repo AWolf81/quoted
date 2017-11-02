@@ -1,4 +1,4 @@
-import CREATE_POST from '../actions';
+import { CREATE_POST } from '../actions';
 
 // Define inital data shape
 
