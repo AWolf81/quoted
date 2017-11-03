@@ -12,10 +12,9 @@ const headers = {
 	'Authorization': token
 }
 
-export function getAllPosts (token) {
+// gets all posts
+export function fetchPosts (token) {
 	return fetch(`${API}/posts`, { method: 'GET', headers })
 		.then(res => res.json())
 		.then(data => data)
 }
-
-// returns object data

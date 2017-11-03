@@ -19,9 +19,6 @@ import PostCard from './PostCard'
 import '../styles/Home.css'
 import '../styles/All.css'
 
-// api
-import * as API from '../utils/api.js'
-
 
 class Home extends Component {
 
@@ -33,12 +30,6 @@ class Home extends Component {
 		detailsPostModalOpen: false,
 	}
 
-	componentDidMount() {
-		API.getAllPosts().then((data) => {
-			this.setState({ receivedData: data })
-		})
-    }
-
 	openDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: true }))
 	closeDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: false }))
 	openCreatePostModal = () => this.setState(() => ({ createPostModalOpen: true }))
@@ -46,6 +37,7 @@ class Home extends Component {
 
 	render() {
 		const { receivedData, loadingDetailsPost, loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
+		console.log(this.props)
 
 		return (
 			<div className="entirePostList">

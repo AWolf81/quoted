@@ -5,10 +5,13 @@ import './index.css';
 import Quoted from './components/Quoted';
 import registerServiceWorker from './registerServiceWorker';
 
-// import store from './store';
+// reducer
 import reducer from './reducers'
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
+
+// store 
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
+import { Provider } from 'react-redux'
 
 
 // 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -27,7 +30,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
   reducer,
   composeEnhancers(
-    applyMiddleware(logger)
+    applyMiddleware(logger, thunk)
   )
 )
 

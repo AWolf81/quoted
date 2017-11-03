@@ -1,4 +1,4 @@
-import { CREATE_POST } from '../actions';
+import { RECEIVE_POSTS, CREATE_POST } from '../actions';
 
 // Define inital data shape
 
@@ -15,8 +15,20 @@ const initialPostState = {
   },
 }
 
-function post (state = initialPostState, action) {
+function fetchPosts (state = initialPostState, action) {
+    const { posts } = action
 
+    switch(action.type) {
+        case RECEIVE_POSTS :
+            return {
+                posts: posts
+            }
+        default : 
+            return state
+    }
+}
+
+function createPost (state = initialPostState, action) {
 	switch (action.type) {
 		case CREATE_POST : 
 			return {
@@ -31,4 +43,4 @@ function post (state = initialPostState, action) {
 
 
 
-export default post
+export default fetchPosts
