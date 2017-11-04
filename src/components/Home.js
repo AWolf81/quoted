@@ -19,6 +19,8 @@ import PostCard from './PostCard'
 import '../styles/Home.css'
 import '../styles/All.css'
 
+import * as API from '../utils/api.js';
+
 
 class Home extends Component {
 
@@ -30,6 +32,12 @@ class Home extends Component {
 		detailsPostModalOpen: false,
 	}
 
+	componentDidMount() { // returns expected
+		API.fetchPosts().then(data => (
+			console.log('Fetched the React way: ', data)
+		));
+	}
+
 	openDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: true }))
 	closeDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: false }))
 	openCreatePostModal = () => this.setState(() => ({ createPostModalOpen: true }))
@@ -37,7 +45,7 @@ class Home extends Component {
 
 	render() {
 		const { receivedData, loadingDetailsPost, loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
-		console.log(this.props)
+		console.log('Fetched the Redux way: ', this.props)
 
 		return (
 			<div className="entirePostList">
@@ -339,10 +347,8 @@ class Home extends Component {
 	}
 }
 
-function mapStateToProps(postId) {
-	return {
-		id: 'Ty'
-	}
+function mapStateToProps( posts ) {
+	return posts
 }
 
 export default connect(mapStateToProps)(Home)

@@ -6,7 +6,7 @@ import Quoted from './components/Quoted';
 import registerServiceWorker from './registerServiceWorker';
 
 // reducer
-import reducer from './reducers'
+import rootReducer from './reducers/rootReducer.js'
 
 // store 
 import { createStore, applyMiddleware, compose } from 'redux'
@@ -28,7 +28,7 @@ const logger = store => next => action => {
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const store = createStore(
-  reducer,
+  rootReducer,
   composeEnhancers(
     applyMiddleware(logger, thunk)
   )

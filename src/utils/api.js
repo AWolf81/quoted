@@ -13,8 +13,7 @@ const headers = {
 }
 
 // gets all posts
-export function fetchPosts (token) {
-	return fetch(`${API}/posts`, { method: 'GET', headers })
-		.then(res => res.json())
-		.then(data => data)
-}
+export const fetchPosts = token => (
+	fetch(`${API}/posts`, { method: 'GET', headers })
+	.then(res => res.json())
+);

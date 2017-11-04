@@ -5,20 +5,22 @@ import * as API from '../utils/api.js';
 
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 
-export const receivePosts = posts => ({
+export const receivePostsSuccess = posts => ({
 	type: RECEIVE_POSTS,
 	posts
-});
+})
 
-// thunk middleware action creator
-export const fetchPosts = () => dispatch => (
-	API.fetchPosts()
-		.then(posts => dispatch(receivePosts(posts)))
-)
+// thunk middleware action creator, intervenes in the above function
+export const receivePosts = () => dispatch => (
+		API
+		.fetchPosts()
+		.then(posts => dispatch(receivePostsSuccess(posts)))
+);
+	
 
 /* CREATE POST
 **************************************************************/
-
+/*
 export const CREATE_POST = 'CREATE_POST';
 
 export function createPost () {
@@ -26,5 +28,5 @@ export function createPost () {
 		type: CREATE_POST,
 	}
 };
-
+*/
 
