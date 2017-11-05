@@ -5,6 +5,9 @@ import './index.css';
 import Quoted from './components/Quoted';
 import registerServiceWorker from './registerServiceWorker';
 
+// actions
+import { fetchPosts } from './actions'
+
 // reducer
 import rootReducer from './reducers/rootReducer.js'
 
@@ -16,7 +19,7 @@ import { Provider } from 'react-redux'
 
 // 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
-const logger = store => next => action => {
+const logger = store => next => action => { 
   console.group(action.type)
   console.info('dispatching', action)
   let result = next(action)
@@ -30,9 +33,16 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
   rootReducer,
   composeEnhancers(
-    applyMiddleware(logger, thunk)
+    applyMiddleware(
+    	logger, // logs actions
+    	thunk // lets us dispatch() functions
+    )
   )
 )
+
+store
+  .dispatch(fetchPosts())
+  .then(() => console.log(store.getState())) // returns expected
 
 ReactDOM.render(
 	<BrowserRouter>
