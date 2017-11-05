@@ -45,7 +45,7 @@ class Home extends Component {
 
 	render() {
 		const { receivedData, loadingDetailsPost, loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
-		console.log('Fetched the Redux way: ', this.props)
+		console.log('Fetched the Redux way: ', this.props.posts)
 
 		return (
 			<div className="entirePostList">
@@ -347,11 +347,12 @@ class Home extends Component {
 	}
 }
 
-function mapStateToProps(posts) {
+function mapStateToProps(state) {
 	return {
-		posts
+		posts: state
 	}
 }
+
 
 export default connect(mapStateToProps)(Home)
 

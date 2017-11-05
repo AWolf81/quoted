@@ -1,31 +1,36 @@
 import { combineReducers } from 'redux'
 import { RECEIVE_POSTS } from '../actions'
 
-/* Define inital data shape
-const initialPostState = {
-  postId: {
-    id: '',
-    parentId: '',
-    timestamp: 0,
-    body: '',
-    author: '',
-    voteScore: 0,
-    deleted: null,
-    parentDeleted: null
-  },
+// Define inital state shape
+const initialState = {
+    posts: [
+        {
+            id: '',
+            parentId: '',
+            timestamp: 0,
+            body: '',
+            author: '',
+            voteScore: 0,
+            deleted: null,
+            parentDeleted: null
+        },
+    ]
 }
-*/
 
-function fetchPostsReducer (state = [], action) {
+function fetchPostsReducer (state = initialState, action) {
     const { posts } = action
 
     switch(action.type) {
         case RECEIVE_POSTS :
-            return posts
+            return {
+                ...state,
+                posts
+            }
         default : 
             return state
     }
 }
+
 /*
 function createPost (state = initialPostState, action) {
 	switch (action.type) {
@@ -38,6 +43,7 @@ function createPost (state = initialPostState, action) {
 	}
 }
 */
+
 const rootReducer = combineReducers({  
   // short hand property names
   fetchPostsReducer
