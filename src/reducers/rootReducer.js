@@ -16,15 +16,12 @@ const initialPostState = {
 }
 */
 
-function fetchPosts (state = [], action) {
+function fetchPostsReducer (state = [], action) {
     const { posts } = action
 
     switch(action.type) {
         case RECEIVE_POSTS :
-            return {
-                ...state,
-                posts
-            }
+            return posts
         default : 
             return state
     }
@@ -43,7 +40,7 @@ function createPost (state = initialPostState, action) {
 */
 const rootReducer = combineReducers({  
   // short hand property names
-  fetchPosts
+  fetchPostsReducer
 })
 
 export default rootReducer

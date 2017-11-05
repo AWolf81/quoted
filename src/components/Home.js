@@ -46,7 +46,6 @@ class Home extends Component {
 	render() {
 		const { receivedData, loadingDetailsPost, loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
 		console.log('Fetched the Redux way: ', this.props)
-		console.log('Received object: ', this.props.fetchPosts)
 
 		return (
 			<div className="entirePostList">

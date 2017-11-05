@@ -32,10 +32,10 @@ function requestPosts (posts) {
 }
 
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
-function receivePosts (posts, json) {
+function receivePosts (posts) {
 	return {
 		type: RECEIVE_POSTS,
-		posts: json,
+		posts,
 		receivedAt: Date.now()
 	}
 }
@@ -49,8 +49,8 @@ export function fetchPosts (posts) {
 			   		res => res.json(),
 			   		error => console.log('An error occured.', error)
 			   	)
-			   .then(json => 
-			   		dispatch(receivePosts(posts, json))
+			   .then(posts => 
+			   		dispatch(receivePosts(posts))
 			   	)
 	}
 }

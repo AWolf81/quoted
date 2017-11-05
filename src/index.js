@@ -42,7 +42,7 @@ const store = createStore(
 
 store
   .dispatch(fetchPosts())
-  .then(() => console.log(store.getState())) // returns expected
+  .then(() => console.log('On store dispatch: ', store.getState())) // returns expected
 
 ReactDOM.render(
 	<BrowserRouter>
