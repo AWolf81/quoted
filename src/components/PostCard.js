@@ -19,9 +19,8 @@ class PostCard extends Component {
     const { post } = this.props
 
     return (
-        <div>
-            <div key={post.id} className="postContainer">
-            {console.log('key 2: ', post.id)}
+        <div key={post.id}>
+            <div className="postContainer">
                 <div className="postAlign">
                 	<div className="postRow">
                 		<div key={post.title} className="postTitle">
