@@ -24,7 +24,6 @@ const initialState = {
 }
 
 function posts (state = initialState, action) {
-    console.log('Reduced posts: ', posts)
     switch(action.type) {
         case RECEIVE_POSTS :
             return Object.assign({}, state, {posts: action.posts})
