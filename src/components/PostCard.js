@@ -21,6 +21,7 @@ class PostCard extends Component {
 
     return (
         <div key={post.id}>
+            {/* {post.id} */}
             <div className="postContainer">
                 <div className="postAlign">
                 	<div className="postRow">

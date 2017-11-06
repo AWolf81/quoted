@@ -25,9 +25,16 @@ class Home extends Component {
 		loadingDetailsPost: false,
 		createPostModalOpen: false,
 		detailsPostModalOpen: false,
+		displayedPost: undefined // used for popup
 	}
 
-	openDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: true }))
+	openDetailsPostModal = (post) => {
+		this.setState({
+			...this.state,
+			detailsPostModalOpen: true,
+			displayedPost: post
+		})
+	};
 	closeDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: false }))
 	openCreatePostModal = () => this.setState(() => ({ createPostModalOpen: true }))
 	closeCreatePostModal = () => this.setState(() => ({ createPostModalOpen: false }))
@@ -42,7 +49,8 @@ class Home extends Component {
 				<div className="postListContainer">
 					<div className="postListRow">
 						{posts.map((post) => (
-							<div key={post.id} onClick={this.openDetailsPostModal}>
+							<div key={post.id} onClick={() => this.openDetailsPostModal(post)}>
+								{/* map id: {post.id} */}
 								<PostCard post={post} />
 							</div>
 						))}
@@ -52,7 +60,7 @@ class Home extends Component {
 						onClick={this.openCreatePostModal}>
 					<MdAddCircle />
 				</button>
-				
+
 				<Modal // VIEW POST DETAILS MODAL
 		          className='modal'
 		          overlayClassName='createOverlay'
@@ -64,15 +72,15 @@ class Home extends Component {
 						{loadingDetailsPost === true
 							?   <div>
 									<div className="postEditorBg" />
-									<Loading type='bubbles' 
-											 delay={200} 
-											 color='#fed80a' 
+									<Loading type='bubbles'
+											 delay={200}
+											 color='#fed80a'
 											 className="loading"
 											 width={120} />
 								</div>
 							:   <div>
 							    	<div className="postEditorBg" />
-									<PostCardDetails />
+									<PostCardDetails post={this.state.displayedPost}/>
 								</div>
 						}
 					</div>
@@ -89,14 +97,14 @@ class Home extends Component {
 						{loadingCreatePost === true
 							?   <div>
 									<div className="postEditorBg" />
-									<Loading type='bubbles' 
-											 delay={200} 
-											 color='#fed80a' 
+									<Loading type='bubbles'
+											 delay={200}
+											 color='#fed80a'
 											 className="loading"
 											 width={120} />
 								</div>
 							:   <div>
-							    	<div className="postEditorBg" /> 
+							    	<div className="postEditorBg" />
 									<PostCardEditor />
 								</div>
 						}

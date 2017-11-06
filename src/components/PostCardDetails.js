@@ -18,11 +18,11 @@ import '../styles/PostCardDetails.css';
 class PostCardDetails extends Component {
 
     render() {
-    const { posts } = this.props.posts
+    const { post } = this.props
 
 	    return (
 	    	<div>
-	    		{posts.map((post) => (
+	    		{/* {posts.map((post) => ( */}
 					<div key={post.id} className="postEditorContainer">
 						<div className="postEditorHeader">
 							<div className="white">
@@ -111,7 +111,7 @@ class PostCardDetails extends Component {
 											<div className="postEditorReplyRow">
 												<div className="postEditorReplyName">
 													<div className="postEditorReplyNamePrompt">
-														Name 
+														Name
 													</div>
 													<input type="text" />
 												</div>
@@ -205,7 +205,7 @@ class PostCardDetails extends Component {
 							</div>{/* COMMENT BLOCK END */}
 						</div>
 					</div>
-				))}
+				{/* ))} */}
 			</div>
 		)
 	}

@@ -41,18 +41,22 @@ function receivePosts (posts) {
 }
 
 // thunk middleware action creator, intervenes in the above function
-export function fetchPosts (posts) {
+export function fetchPosts (/*posts*/) {
 	return function (dispatch) {
-		dispatch(requestPosts(posts))
-		return getAllPosts()
+		const posts =  [
+			{id:0, title: 'Hey there1', author: 'Tester1', category: 'blog', body: 'Hey this is some content!'},
+			{id:1, title: 'Another Hey there2', author: 'Tester2', category: 'blog',  body: 'Hey this is some other content!'},
+			{id:2, title: 'Hello there3', author: 'Tester1', category: 'life style',  body: 'Hey this is some more content!'}
+		]
+	    //	dispatch(requestPosts(posts)) // skipped
+		dispatch(receivePosts(posts));
+		/*return getAllPosts()
 			   .then(
 			   		res => res.json(),
 			   		error => console.log('An error occured.', error)
 			   	)
 			   .then(posts => {
 			   		dispatch(receivePosts(posts))
-			   	})
+			   	})*/
 	}
 }
-
-
