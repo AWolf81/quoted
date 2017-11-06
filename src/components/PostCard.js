@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 // utils
 import { capitalize, convertTimeStamp } from '../utils/helpers'
@@ -75,4 +76,11 @@ class PostCard extends Component {
     }
 }
 
-export default PostCard;
+function mapStateToProps(state) {
+    return {
+        posts: state.posts
+    }
+}
+
+
+export default connect(mapStateToProps)(PostCard)

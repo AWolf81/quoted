@@ -72,9 +72,7 @@ class Home extends Component {
 								</div>
 							:   <div>
 							    	<div className="postEditorBg" />
-							    	{posts.map((post) => (
-										<PostCardDetails key={post.id} post={post}/>
-									))}
+									<PostCardDetails />
 								</div>
 						}
 					</div>
@@ -99,9 +97,7 @@ class Home extends Component {
 								</div>
 							:   <div>
 							    	<div className="postEditorBg" /> 
-									{posts.map((post) => (
-										<PostCardEditor />
-									))}
+									<PostCardEditor />
 								</div>
 						}
 					</div>
