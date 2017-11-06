@@ -32,7 +32,7 @@ class PostCardDetails extends Component {
 										{capitalize(post.author)}
 									</div>
 									<div key={post.timestamp} className="postEditorAuthor">
-										/ { convertTimeStamp(post) }
+										/ {convertTimeStamp(post)}
 									</div>
 								</div>
 							</div>
