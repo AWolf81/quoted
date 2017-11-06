@@ -49,9 +49,10 @@ export function fetchPosts (posts) {
 			   		res => res.json(),
 			   		error => console.log('An error occured.', error)
 			   	)
-			   .then(posts => 
+			   .then(posts => {
+			   		console.log('Fetched posts: ', posts)
 			   		dispatch(receivePosts(posts))
-			   	)
+			   	})
 	}
 }
 

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import { RECEIVE_POSTS } from '../actions'
 
+/*
 // Define inital state shape
 const initialState = {
     posts: [
@@ -16,18 +17,18 @@ const initialState = {
         },
     ]
 }
+*/
 
-function fetchPostsReducer (state = initialState, action) {
+function posts (state = [], action) {
     const { posts } = action
-
+    console.log('Reduced posts: ', posts)
     switch(action.type) {
         case RECEIVE_POSTS :
             return {
-                ...state,
                 posts
             }
         default : 
-            return state
+            return state;
     }
 }
 
@@ -46,7 +47,7 @@ function createPost (state = initialPostState, action) {
 
 const rootReducer = combineReducers({  
   // short hand property names
-  fetchPostsReducer
+  posts
 })
 
 export default rootReducer
