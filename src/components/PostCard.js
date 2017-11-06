@@ -20,20 +20,21 @@ class PostCard extends Component {
 
     return (
         <div>
-            <div className="postContainer">
+            <div key={post.id} className="postContainer">
+            {console.log('key 2: ', post.id)}
                 <div className="postAlign">
                 	<div className="postRow">
-                		<div className="postTitle">
-                			{post.title}
+                		<div key={post.title} className="postTitle">
+                			{capitalize(post.title)}
                 		</div>
                 	</div>
                 	<div className="postRow">
                 		<div className="postAuthorIcon">
                 			<MdAccountCircle />
                 		</div>
-                		<div className="postAuthorName">
+                		<div key={post.author} className="postAuthorName">
                 			{capitalize(post.author)}&nbsp;
-                            <span className="postTimeStamp">
+                            <span key={post.timestamp} className="postTimeStamp">
                                 / { convertTimeStamp(post) }
                             </span>
                 		</div>
@@ -41,8 +42,8 @@ class PostCard extends Component {
                 	<div className="postRow">
                 		<div className="actionList">
                 			<div className="actionItem">
-                    			<div className="actionCommentCount">
-                    				2
+                    			<div key={post.commentCount} className="actionCommentCount">
+                    				{post.commentCount}
                     			</div>
                     			<div className="actionComment">
                     				<FaQuoteLeft />
@@ -59,13 +60,13 @@ class PostCard extends Component {
                     			</button>
                     		</div>
                             <div className="voteScore">
-                                <div className="voteScoreCount">
-                                    +8
+                                <div key={post.voteScore} className="voteScoreCount">
+                                    {post.voteScore}
                                 </div>
                             </div>
                 		</div>
-                		<div className="postCategory">
-                			Things
+                		<div key={post.category} className="postCategory">
+                			{capitalize(post.category)}
                 		</div>
                 	</div>
                 </div>
