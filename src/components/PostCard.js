@@ -16,7 +16,7 @@ import '../styles/PostCard.css';
 class PostCard extends Component {
 
     render() {
-    const { postCard } = this.props
+    const { post } = this.props
 
     return (
         <div>
@@ -24,7 +24,7 @@ class PostCard extends Component {
                 <div className="postAlign">
                 	<div className="postRow">
                 		<div className="postTitle">
-                			{postCard.title}
+                			{post.title}
                 		</div>
                 	</div>
                 	<div className="postRow">
@@ -32,9 +32,9 @@ class PostCard extends Component {
                 			<MdAccountCircle />
                 		</div>
                 		<div className="postAuthorName">
-                			{capitalize(postCard.author)}&nbsp;
+                			{capitalize(post.author)}&nbsp;
                             <span className="postTimeStamp">
-                                / { convertTimeStamp(postCard) }
+                                / { convertTimeStamp(post) }
                             </span>
                 		</div>
                 	</div>

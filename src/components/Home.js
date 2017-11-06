@@ -19,23 +19,14 @@ import PostCard from './PostCard'
 import '../styles/Home.css'
 import '../styles/All.css'
 
-import * as API from '../utils/api.js';
-
 
 class Home extends Component {
 
 	state = {
-		receivedData: [],
 		loadingCreatePost: false,
 		loadingDetailsPost: false,
 		createPostModalOpen: false,
 		detailsPostModalOpen: false,
-	}
-
-	componentDidMount() { // returns expected
-		API.fetchPosts().then(data => (
-			console.log('Fetched the React way: ', data)
-		));
 	}
 
 	openDetailsPostModal = () => this.setState(() => ({ detailsPostModalOpen: true }))
@@ -44,17 +35,18 @@ class Home extends Component {
 	closeCreatePostModal = () => this.setState(() => ({ createPostModalOpen: false }))
 
 	render() {
-		const { receivedData, loadingDetailsPost, loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
-		console.log('Fetched the Redux way: ', this.props.posts)
+		const { loadingDetailsPost, loadingCreatePost, detailsPostModalOpen, createPostModalOpen } = this.state
+		const { posts } = this.props.posts
+		console.log('Fetched the Redux way: ', this.props.posts.posts)
 
 		return (
 			<div className="entirePostList">
 				<NavBar />
 				<div className="postListContainer">
 					<div className="postListRow">
-						{receivedData.map((postList, index) => (
+						{posts.map((post, index) => (
 							<div key={index} onClick={this.openDetailsPostModal}>
-								<PostCard key={postList.postId} postCard={postList} />
+								<PostCard key={post} post={post} />
 							</div>
 						))}
 					</div>
@@ -349,7 +341,7 @@ class Home extends Component {
 
 function mapStateToProps(state) {
 	return {
-		posts: state
+		posts: state.posts
 	}
 }
 

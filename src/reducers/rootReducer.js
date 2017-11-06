@@ -19,14 +19,15 @@ const initialState = {
 }
 */
 
-function posts (state = [], action) {
-    const { posts } = action
+const initialState = {
+    posts: []
+}
+
+function posts (state = initialState, action) {
     console.log('Reduced posts: ', posts)
     switch(action.type) {
         case RECEIVE_POSTS :
-            return {
-                posts
-            }
+            return Object.assign({}, state, {posts: action.posts})
         default : 
             return state;
     }
